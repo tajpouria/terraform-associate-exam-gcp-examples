@@ -1,4 +1,12 @@
 terraform {
+  cloud {
+    organization = "tajpouria"
+
+    workspaces {
+      name = "tf-associate"
+    }
+  }
+
   required_providers {
     google = {
       source  = "hashicorp/google"
