@@ -1,0 +1,8 @@
+#cloud-config
+
+packages:
+  - apache2
+
+runcmd:
+  - systemctl daemon-reload
+  - systemctl start apache2
