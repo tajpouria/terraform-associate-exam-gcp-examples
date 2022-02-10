@@ -18,3 +18,8 @@ variable "ssh_pub_key" {
   type      = string
   sensitive = true
 }
+
+variable "ssh_pv_key_path" {
+  type      = string
+  sensitive = true
+}

@@ -29,5 +29,36 @@ resource "google_compute_instance" "instace" {
   }
 
   allow_stopping_for_update = true
-}
 
+  # provisioner "local-exec" {
+  #   command = "echo ${self.network_interface[0].network_ip} >> private_ips.txt"
+  # }
+
+  # provisioner "remote-exec" {
+  #   inline = [
+  #     "echo ${self.network_interface[0].network_ip} >> /home/${var.ssh_user}/private_ips.txt",
+  #   ]
+  #   connection {
+  #     type        = "ssh"
+  #     agent       = false
+  #     user        = var.ssh_user
+  #     private_key = file(var.ssh_pv_key_path)
+  #     timeout     = "30s"
+  #     host        = self.network_interface[0].access_config[0].nat_ip
+  #   }
+  # }
+
+  provisioner "file" {
+    source      = "./private_ips.txt"
+    destination = "/home/${var.ssh_user}/private_ips.txt"
+
+    connection {
+      type        = "ssh"
+      agent       = false
+      user        = var.ssh_user
+      private_key = file(var.ssh_pv_key_path)
+      timeout     = "30s"
+      host        = self.network_interface[0].access_config[0].nat_ip
+    }
+  }
+}

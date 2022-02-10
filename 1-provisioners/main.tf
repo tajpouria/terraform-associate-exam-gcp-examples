@@ -1,9 +1,9 @@
 terraform {
-  cloud {
-    organization = "tajpouria"
+  # cloud {
+  #   organization = "tajpouria"
 
-    workspaces {
-      name = "provisioners"
-    }
-  }
-} 
+  #   workspaces {
+  #     name = "provisioners"
+  #   }
+  # }
+}
