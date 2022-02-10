@@ -20,3 +20,4 @@ A set Terraform examples using [Google Cloud Provider](https://registry.terrafor
 - Use local-exec to echo the instance private IP address into a text file on the local machine
 - Use remote-exec and connection block to echo the instance private IP address into a text file on the remote instance
 - Use file and connection block to copy a text file to the remote instance
+- Configure a null resource which execute GCloud describe instance locally after instance provisioned

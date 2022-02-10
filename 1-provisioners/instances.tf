@@ -5,8 +5,8 @@ locals {
   }
 }
 
-resource "google_compute_instance" "instace" {
-  name         = "instace"
+resource "google_compute_instance" "instance" {
+  name         = "instance"
   machine_type = local.machine_type
 
   tags = ["web"]
@@ -63,4 +63,14 @@ resource "google_compute_instance" "instace" {
       host        = self.network_interface[0].access_config[0].nat_ip
     }
   }
+}
+
+resource "null_resource" "describe_instance" {
+  provisioner "local-exec" {
+    command = "gcloud compute instances describe ${google_compute_instance.instance.name} --zone ${var.zone}"
+  }
+
+  depends_on = [
+    google_compute_instance.instance
+  ]
 }

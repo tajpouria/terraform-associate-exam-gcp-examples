@@ -9,7 +9,7 @@ locals {
 }
 
 resource "google_compute_instance" "my_instance" {
-  name         = "instace1"
+  name         = "instance"
   machine_type = local.machine_type
 
   boot_disk {
