@@ -24,16 +24,18 @@ resource "google_compute_instance" "instace" {
   }
 
   metadata = {
-    ssh-keys  = "${var.ssh_user}:${var.ssh_pub_key}" // Dont forgot to run `chmod 400 id_rsa`to run ssh
+    ssh-keys  = "${var.ssh_user}:${var.ssh_pub_key}" # Run `chmod 400 id_rsa` to give Terraform access to ssh public key file
     user-data = "${data.template_file.user_data.rendered}"
   }
 
   allow_stopping_for_update = true
 
+  # Uncomment to execute command on local machine
   # provisioner "local-exec" {
   #   command = "echo ${self.network_interface[0].network_ip} >> private_ips.txt"
   # }
 
+  # Uncomment to execute command on remote instance
   # provisioner "remote-exec" {
   #   inline = [
   #     "echo ${self.network_interface[0].network_ip} >> /home/${var.ssh_user}/private_ips.txt",
