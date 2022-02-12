@@ -15,7 +15,7 @@ A set Terraform examples using [Google Cloud Provider](https://registry.terrafor
 [Provisioners](1-provisioners)
 
 - Copy local SSH key into provisioned instance
-- Use data directive to reference existing default VPC resource
+- Use data directive to reference existing default VPC
 - Configure cloud-init using template file data to install apache on provisioned instance
 - Use local-exec to echo the instance private IP address into a text file on the local machine
 - Use remote-exec and connection block to echo the instance private IP address into a text file on the remote instance
