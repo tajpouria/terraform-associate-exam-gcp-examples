@@ -21,3 +21,13 @@ A set Terraform examples using [Google Cloud Provider](https://registry.terrafor
 - Use remote-exec and connection block to echo the instance private IP address into a text file on the remote instance
 - Use file and connection block to copy a text file to the remote instance
 - Configure a null resource which execute GCloud describe instance locally after instance provisioned
+
+[Variables & Outputs](2-variables&outputs)
+
+- Define machine type variable and specify that using terraform.tfvars and \*.auto.tfvars
+- Specify machine type using environment variables
+- Validate instance type variable using `can` and `regex` functions
+- Move the instance resource to the a sub module, expose instance public IP address as output and chain it on root module
+- Define a data source which includes filter fields and reference in another resource
+
+[Resource Meta Arguments](3-resource-meta-arguments)
