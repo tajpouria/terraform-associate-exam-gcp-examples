@@ -17,3 +17,7 @@ variable "machine_type" {
     error_message = "The machine type must be chosen from e2 Family."
   }
 }
+
+variable "network_name" {
+  type = string
+}

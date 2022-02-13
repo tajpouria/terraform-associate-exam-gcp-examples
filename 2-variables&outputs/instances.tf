@@ -5,6 +5,7 @@ module "instances_submodule" {
   zone         = var.zone
   project      = var.project
   machine_type = var.machine_type
+  network_name = data.google_compute_network.default.name
 }
 
 output "public_ip" {
