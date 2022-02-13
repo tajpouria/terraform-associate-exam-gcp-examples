@@ -13,7 +13,7 @@ variable "zone" {
 variable "machine_type" {
   type = string
   validation {
-    condition = can(regex("^e2", var.machine_type))
+    condition     = can(regex("^e2", var.machine_type))
     error_message = "The machine type must be chosen from e2 Family."
   }
 }

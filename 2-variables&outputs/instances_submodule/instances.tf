@@ -2,12 +2,9 @@ locals {
   initialize_params = {
     image = "debian-cloud/debian-9"
   }
-  network_interface = {
-    network = "default"
-  }
 }
 
-resource "google_compute_instance" "my_instance" {
+resource "google_compute_instance" "instance" {
   name         = "instance"
   machine_type = var.machine_type
 
@@ -18,9 +15,10 @@ resource "google_compute_instance" "my_instance" {
   }
 
   network_interface {
-    network = local.network_interface.network
+    network = data.google_compute_network.default.name
+    access_config {
+    }
   }
 
   allow_stopping_for_update = true
 }
-

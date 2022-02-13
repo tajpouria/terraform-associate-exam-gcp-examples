@@ -1,26 +1,12 @@
-locals {
-  initialize_params = {
-    image = "debian-cloud/debian-9"
-  }
-  network_interface = {
-    network = "default"
-  }
-}
+module "instances_submodule" {
+  source = "./instances_submodule"
 
-resource "google_compute_instance" "my_instance" {
-  name         = "instance"
+  region       = var.region
+  zone         = var.zone
+  project      = var.project
   machine_type = var.machine_type
-
-  boot_disk {
-    initialize_params {
-      image = local.initialize_params.image
-    }
-  }
-
-  network_interface {
-    network = local.network_interface.network
-  }
-
-  allow_stopping_for_update = true
 }
 
+output "public_ip" {
+  value = module.instances_submodule.public_ip
+}
