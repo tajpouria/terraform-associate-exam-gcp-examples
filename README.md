@@ -31,3 +31,13 @@ A set Terraform examples using [Google Cloud Provider](https://registry.terrafor
 - Define a data source which includes filter fields and reference in another resource
 
 [Resource Meta Arguments](3-resource-meta-arguments)
+
+- Provision an compute instance after creating a bucket using the `depends_on` directive
+- Provision 2 compute instances using the `count` directive, and get all provisioned instances public IP address as output
+- Provision 3 instances with different machine types using `for_each` directive, and get all provisioned instances public IP address as output
+- Create 2 instances using different providers in different zones(reference providers using aliases), use data directive to specify the network of each instances, and get the public IP address of the the instates as output
+- Use `prevent_destroy` lifecycle in one of the compute instances to prevent accidental destroy of that resource
+
+
+[Expression](4-expression)
+5.15.5
