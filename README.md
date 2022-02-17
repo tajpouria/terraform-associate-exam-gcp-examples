@@ -38,6 +38,5 @@ A set Terraform examples using [Google Cloud Provider](https://registry.terrafor
 - Create 2 instances using different providers in different zones(reference providers using aliases), use data directive to specify the network of each instances, and get the public IP address of the the instates as output
 - Use `prevent_destroy` lifecycle in one of the compute instances to prevent accidental destroy of that resource
 
-
 [Expression](4-expression)
 5.15.5
