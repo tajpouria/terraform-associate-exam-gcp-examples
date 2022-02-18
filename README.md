@@ -1,6 +1,6 @@
 # Terraform Associate Exam GCP Examples
 
-A set Terraform examples using [Google Cloud Provider](https://registry.terraform.io/providers/hashicorp/google/) that covers the ["HashiCorp Certified: Terraform Associate"](https://www.hashicorp.com/certification/terraform-associate) exam objectives.
+A set of Terraform examples using [Google Cloud Provider](https://registry.terraform.io/providers/hashicorp/google/) that covers the ["HashiCorp Certified: Terraform Associate"](https://www.hashicorp.com/certification/terraform-associate) exam objectives.
 
 [Getting Started](0-getting-started)
 
@@ -39,4 +39,12 @@ A set Terraform examples using [Google Cloud Provider](https://registry.terrafor
 - Use `prevent_destroy` lifecycle in one of the compute instances to prevent accidental destroy of that resource
 
 [Expressions](4-expressions)
-5.15.5
+
+- Define a numeric variable and use string interpolation and directive(ternary operator) to get whether that variable is odd or even as output
+- Define a map variable and use the `for` operator to iterate over them and return a list of values
+- Define a list variables containing 5 items, use the `for` operator to iterate over them and return a map as output with the each items index as the key and each item itself as value, if the index is a even number
+- Define a list of maps with one property and use splat operator to get the that value as output
+- Use dynamic blocks to specify ssh, icmp and tcp(80 and 443) in a compute firewall resource
+
+[Expressions](5-state)
+6.1.30
