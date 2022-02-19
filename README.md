@@ -47,4 +47,34 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Use dynamic blocks to specify ssh, icmp and tcp(80 and 443) in a compute firewall resource
 
 [Expressions](5-state)
-6.1.30
+
+- Provision a compute instance and use `terraform state list` and `terraform state show` to fetch the state
+- Use `terraform state mv` to rename the provisioned instance
+
+[Plan & Apply](6-plan-&-apply)
+
+- Save the terraform `plan` output as a file and pass it `apply` to be applied
+
+[Manage Resource Drift](7-manage-resource-drift)
+
+- Provision a compute instance then use the `apply -replace` to replace it
+- Terminate the instance manually through the GCP console then sync the terraform local state using the same apply -refresh-only` command
+- Create a bucket manually using GCP console then use the terraform `import` to import that bucket to the local state
+
+[Troubleshooting](8-troubleshooting)
+
+- Use `TF_LOG` and `TF_LOG_PATH` environment variables to generate a log file containing the core and provider logs on terraform apply
+
+[Modules](9-modules)
+
+- Create a custom module called `terraform-google-envoy-hello-world` which provisions a compute instance with envoy proxy on it and exposes the HTTP on a public IP address
+- Use the module in the root module
+- Tag and publish the module to the Terraform registry
+
+[VSC workflow](10-vcs-workflow)
+
+- Setup Terraform cloud Github integration, configure to run plan on pull requests and enable apply auto approval on main branch changes
+
+[Backends](11-backends)
+
+8.05.29
