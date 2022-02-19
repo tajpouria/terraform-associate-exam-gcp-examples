@@ -58,7 +58,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 [Manage Resource Drift](7-manage-resource-drift)
 
 - Provision a compute instance then use the `apply -replace` to replace it
-- Terminate the instance manually through the GCP console then sync the terraform local state using the same apply -refresh-only` command
+- Terminate the instance manually through the GCP console then sync the terraform local state using the same apply `-refresh-only` command
 - Create a bucket manually using GCP console then use the terraform `import` to import that bucket to the local state
 
 [Troubleshooting](8-troubleshooting)
