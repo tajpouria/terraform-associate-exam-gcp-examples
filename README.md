@@ -41,12 +41,12 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 [Expressions](4-expressions)
 
 - Define a numeric variable and use string interpolation and directive(ternary operator) to get whether that variable is odd or even as output
-- Define a map variable and use the `for` operator to iterate over them and return a list of values
+- Define a map variable and use the `for` operator to iterate over them and return a list of key => values in uppercase
 - Define a list variables containing 5 items, use the `for` operator to iterate over them and return a map as output with the each items index as the key and each item itself as value, if the index is a even number
 - Define a list of maps with one property and use splat operator to get the that value as output
 - Use dynamic blocks to specify ssh, icmp and tcp(80 and 443) in a compute firewall resource
 
-[Expressions](5-state)
+[State](5-state)
 
 - Provision a compute instance and use `terraform state list` and `terraform state show` to fetch the state
 - Use `terraform state mv` to rename the provisioned instance
