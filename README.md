@@ -67,7 +67,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 
 [Modules](9-modules)
 
-- Create a custom module called `terraform-google-envoy-hello-world` which provisions a compute instance with envoy proxy on it and exposes the HTTP on a public IP address
+- Create a custom module called `terraform-google-apache-hello-world` which provisions a compute instance with apache webserver on it and exposes the HTTP on a public IP address
 - Use the module in the root module
 - Tag and publish the module to the Terraform registry
 
