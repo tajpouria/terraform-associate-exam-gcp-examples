@@ -2,7 +2,7 @@
 
 A set of Terraform examples using [Google Cloud Provider](https://registry.terraform.io/providers/hashicorp/google/) that covers the ["HashiCorp Certified: Terraform Associate"](https://www.hashicorp.com/certification/terraform-associate) exam objectives.
 
-[Getting Started](0-getting-started)
+[Getting Started](00-getting-started)
 
 - Add GCP provider
 - Configure credentials
@@ -12,7 +12,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Create Terraform Cloud workspace
 - Migrate local to remote workspace
 
-[Provisioners](1-provisioners)
+[Provisioners](01-provisioners)
 
 - Copy local SSH key into provisioned instance
 - Use data directive to reference existing default VPC
@@ -22,7 +22,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Use file and connection block to copy a text file to the remote instance
 - Configure a null resource which execute GCloud describe instance locally after instance provisioned
 
-[Variables & Outputs](2-variables-and-outputs)
+[Variables & Outputs](02-variables-and-outputs)
 
 - Define machine type variable and specify that using terraform.tfvars and \*.auto.tfvars
 - Specify machine type using environment variables
@@ -30,7 +30,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Move the instance resource to the a sub module, expose instance public IP address as output and chain it on root module
 - Define a data source which includes filter fields and reference in another resource
 
-[Resource Meta Arguments](3-resource-meta-arguments)
+[Resource Meta Arguments](03-resource-meta-arguments)
 
 - Provision an compute instance after creating a bucket using the `depends_on` directive
 - Provision 2 compute instances using the `count` directive, and get all provisioned instances public IP address as output
@@ -38,7 +38,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Create 2 instances using different providers in different zones(reference providers using aliases), use data directive to specify the network of each instances, and get the public IP address of the the instates as output
 - Use `prevent_destroy` lifecycle in one of the compute instances to prevent accidental destroy of that resource
 
-[Expressions](4-expressions)
+[Expressions](04-expressions)
 
 - Define a numeric variable and use string interpolation and directive(ternary operator) to get whether that variable is odd or even as output
 - Define a map variable and use the `for` operator to iterate over them and return a list of key => values in uppercase
@@ -46,26 +46,26 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Define a list of maps with one property and use splat operator to get the that value as output
 - Use dynamic blocks to specify ssh, icmp and tcp(80 and 443) in a compute firewall resource
 
-[State](5-state)
+[State](05-state)
 
 - Provision a compute instance and use `terraform state list` and `terraform state show` to fetch the state
 - Use `terraform state mv` to rename the provisioned instance
 
-[Plan & Apply](6-plan--apply)
+[Plan & Apply](06-plan--apply)
 
 - Save the terraform `plan` output as a file and pass it `apply` to be applied
 
-[Manage Resource Drift](7-manage-resource-drift)
+[Manage Resource Drift](07-manage-resource-drift)
 
 - Provision a compute instance then use the `apply -replace` to replace it
 - Terminate the instance manually through the GCP console then sync the terraform local state using the same apply `-refresh-only` command
 - Create a bucket manually using GCP console then use the terraform `import` to import that bucket to the local state
 
-[Troubleshooting](8-troubleshooting)
+[Troubleshooting](08-troubleshooting)
 
 - Use `TF_LOG` and `TF_LOG_PATH` environment variables to generate a log file containing the core and provider logs on terraform apply
 
-[Modules](9-modules)
+[Modules](09-modules)
 
 - Create a custom module called `terraform-google-apache-hello-world` which provisions a compute instance with apache webserver on it and exposes the HTTP on a public IP address
 - Use the module in the root module
