@@ -22,7 +22,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Use file and connection block to copy a text file to the remote instance
 - Configure a null resource which execute GCloud describe instance locally after instance provisioned
 
-[Variables & Outputs](2-variables&outputs)
+[Variables & Outputs](2-variables-and-outputs)
 
 - Define machine type variable and specify that using terraform.tfvars and \*.auto.tfvars
 - Specify machine type using environment variables
@@ -51,7 +51,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Provision a compute instance and use `terraform state list` and `terraform state show` to fetch the state
 - Use `terraform state mv` to rename the provisioned instance
 
-[Plan & Apply](6-plan-&-apply)
+[Plan & Apply](6-plan--apply)
 
 - Save the terraform `plan` output as a file and pass it `apply` to be applied
 
