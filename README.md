@@ -77,4 +77,6 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 
 [Backends](11-backends)
 
-8.05.29
+- Configure a standard backend using a GCS bucket with encryption enabled
+- Setup a remote backend using Terraform cloud with two workspaces for development and staging environment with separate variables 
+- Create two projects, provision a vpc in one, and reference its state file using `terraform_remote_state` in a data directive in the other project, and use that vpc to provision a compute instance
