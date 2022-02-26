@@ -17,4 +17,3 @@ def main():
     print(f"Base 64 encoded encyption key: {encoded_key}")
 
 main()
-
