@@ -6,11 +6,12 @@ terraform {
     }
   }
 
-  cloud {
+  backend "remote" {
+    hostname = "app.terraform.io"
     organization = "tajpouria"
 
     workspaces {
-      name = "multi-ws"
+      prefix = "multi-ws-"
     }
   }
 }
