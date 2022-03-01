@@ -80,3 +80,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Configure a standard backend using a GCS bucket with encryption enabled
 - Setup a remote backend using Terraform cloud with two workspaces for development and staging environment with separate variables
 - Create two projects, provision a vpc in one, and reference its state file using `terraform_remote_state` in a data directive in the other project, and use that vpc to provision a compute instance
+
+[Complex types](12-complex-types)
+
+- Create a following variables: list with type properly, object with type property, tuple with type property, list of objects with type property
