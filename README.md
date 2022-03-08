@@ -99,4 +99,6 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Use Packer to bake image an image from debian ubuntu source, install NGINX webserver on it and export it to GCS
 - Reference the packer image in terraform compute engine, setup firewall rules and public IP address and fetch the NGINX default page
 
+[Consul introduction](15-consul-introduction)
+
 12:25
