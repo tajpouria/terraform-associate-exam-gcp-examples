@@ -89,4 +89,9 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 
 - Setup two workspaces, dev and prod, Use a standard GCS backend to keep track of the state files of those workspaces, provision and compute instance on each workspaces with a different machine type, micro for dev an small for prod workspace
 
-11.58.04
+[Packer Introduction](14-packer-introduction)
+
+- Build two packer images using docker builder and form ubuntu xenial and bionic sources
+- Create one tag from the xenial, and two tags from the bionic packer images
+
+  11.58.04
