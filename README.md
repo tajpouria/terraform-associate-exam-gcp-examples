@@ -27,7 +27,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Define machine type variable and specify that using terraform.tfvars and \*.auto.tfvars
 - Specify machine type using environment variables
 - Validate instance type variable using `can` and `regex` functions
-- Move the instance resource to the a sub module, expose instance public IP address as output and chain it on root module
+- Move the instance resource to the sub module, expose instance public IP address as output and chain it on root module
 - Define a data source which includes filter fields and reference in another resource
 
 [Resource Meta Arguments](03-resource-meta-arguments)
@@ -35,8 +35,8 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Provision an compute instance after creating a bucket using the `depends_on` directive
 - Provision 2 compute instances using the `count` directive, and get all provisioned instances public IP address as output
 - Provision 3 instances with different machine types using `for_each` directive, and get all provisioned instances public IP address as output
-- Create 2 instances using different providers in different zones(reference providers using aliases), use data directive to specify the network of each instances, and get the public IP address of the the instates as output
-- Use `prevent_destroy` lifecycle in one of the compute instances to prevent accidental destroy of that resource
+- Create 2 instances using different providers in different zones(reference providers using aliases), use data directive to specify the network of each instances, and get the public IP address of the instates as output
+- Use `prevent_destroy` life cycle in one of the compute instances to prevent accidental destroy of that resource
 
 [Expressions](04-expressions)
 
@@ -79,8 +79,12 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 
 - Configure a standard backend using a GCS bucket with encryption enabled
 - Setup a remote backend using Terraform cloud with two workspaces for development and staging environment with separate variables
-- Create two projects, provision a vpc in one, and reference its state file using `terraform_remote_state` in a data directive in the other project, and use that vpc to provision a compute instance
+- Create two projects, provision a VPC in one, and reference its state file using `terraform_remote_state` in a data directive in the other project, and use that VPC to provision a compute instance
 
 [Complex types](12-complex-types)
 
 - Create a following variables: list with type properly, object with type property, tuple with type property, list of objects with type property
+
+[Workspaces](13-workspaces)
+
+- Setup two workspaces, dev and prod, Use a standard GCS backend to keep track of the state files of those workspaces, provision and compute instance on each workspaces with a different machine type, micro for dev an small for prod workspace
