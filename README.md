@@ -22,7 +22,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Use file and connection block to copy a text file to the remote instance
 - Configure a null resource which execute GCloud describe instance locally after instance provisioned
 
-[Variables & Outputs](02-variables-and-outputs)
+[Variables and Outputs](02-variables-and-outputs)
 
 - Define machine type variable and specify that using terraform.tfvars and \*.auto.tfvars
 - Specify machine type using environment variables
@@ -51,7 +51,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Provision a compute instance and use `terraform state list` and `terraform state show` to fetch the state
 - Use `terraform state mv` to rename the provisioned instance
 
-[Plan & Apply](06-plan--apply)
+[Plan and Apply](06-plan--apply)
 
 - Save the terraform `plan` output as a file and pass it `apply` to be applied
 
@@ -94,4 +94,8 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Build two packer images using docker builder and form ubuntu xenial and bionic sources
 - Create one tag from the xenial, and two tags from the bionic packer images
 
-  11.58.04
+[Terraform and Packer](15-packer-and-terraform)
+
+- Use Packer to bake image an image from debian ubuntu source, install NGINX webserver on it and export it to GCS
+- Reference the packer image in terraform compute engine, setup firewall rules and public IP address and fetch the NGINX default page
+
