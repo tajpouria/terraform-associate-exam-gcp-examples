@@ -89,7 +89,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 
 - Setup two workspaces, dev and prod, Use a standard GCS backend to keep track of the state files of those workspaces, provision and compute instance on each workspaces with a different machine type, micro for dev an small for prod workspace
 
-[Packer Introduction](14-packer-introduction)
+[Packer introduction](14-packer-introduction)
 
 - Build two packer images using docker builder and form ubuntu xenial and bionic sources
 - Create one tag from the xenial, and two tags from the bionic packer images
@@ -100,3 +100,5 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Reference the packer image in terraform compute engine, setup firewall rules and public IP address and fetch the NGINX default page
 
 [Terraform and Vault](16-terraform-and-Vault)
+
+[Terraform pull request automation with Atlantis](17-terraform-atlantis)
