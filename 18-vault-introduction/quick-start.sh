@@ -1,7 +1,7 @@
 # Starting the server
 vault server -dev
-UNSEAL_KEY='DeuQt6ab9Tpvdhr81pxupa72QxCZKBcXn0H7WCJyCes='
-export VAULT_ADDR='http://127.0.0.1:8200' && export VAULT_TOKEN="s.EWKOWADaFBHHvZypf88RAne8"
+UNSEAL_KEY='secret'
+export VAULT_ADDR='http://127.0.0.1:8200' && export VAULT_TOKEN="secret"
 vault login "$VAULT_TOKEN"
 vault status
 # First secret
