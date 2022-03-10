@@ -99,7 +99,7 @@ A set of Terraform examples using [Google Cloud Provider](https://registry.terra
 - Use Packer to bake image an image from debian ubuntu source, install NGINX webserver on it and export it to GCS
 - Reference the packer image in terraform compute engine, setup firewall rules and public IP address and fetch the NGINX default page
 
-[Vault introduction](18-vault-introduction)
+[Vault introduction](16-vault-introduction)
 
 [Terraform and Vault](17-terraform-and-Vault)
 
